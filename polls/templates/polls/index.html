@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Aida's polls</title>
+</head>
+<body>
+<p>Listado preguntas</p>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="">{{question.id }}</a> --- {{question.question}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
